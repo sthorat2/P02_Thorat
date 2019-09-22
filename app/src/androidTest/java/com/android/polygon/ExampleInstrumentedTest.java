@@ -1,4 +1,4 @@
-package com.android.p02_thorat;
+package com.android.polygon;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.android.p02_thorat", appContext.getPackageName());
+        assertEquals("com.android.polygon", appContext.getPackageName());
     }
 }

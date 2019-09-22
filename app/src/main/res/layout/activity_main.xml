@@ -9,21 +9,39 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="17dp">
+        android:orientation="vertical">
 
-        <LinearLayout
-            android:id="@+id/customViewLayout"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Radius"/>
+
+        <SeekBar
+            android:id="@+id/radiusbar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="50"/>
 
-            <SeekBar
-                android:id="@+id/seekBar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
+        <TextView
+            android:id="@+id/pointtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Number of point in polygon:3"/>
+
+        <SeekBar
+            android:id="@+id/pointbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="10"
+            android:progress="0"/>
+
+        <com.android.polygon.CustomView
+            android:id="@+id/customview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
 
     </LinearLayout>
 

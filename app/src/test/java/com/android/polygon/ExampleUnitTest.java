@@ -1,4 +1,4 @@
-package com.android.p02_thorat;
+package com.android.polygon;
 
 import org.junit.Test;
 
