@@ -1,4 +1,4 @@
-package com.android.polygon;
+package com.android.circle;
 
 import org.junit.Test;
 

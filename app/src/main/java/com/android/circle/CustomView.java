@@ -1,7 +1,8 @@
-package com.android.p02_thorat;
+package com.android.circle;
 
 import android.content.Context;
 import android.graphics.Canvas;
+import android.graphics.Path.Direction;
 import android.util.AttributeSet;
 import android.view.View;
 
@@ -9,7 +10,6 @@ public class CustomView extends View{
 
     CustomShape customShape;
     float ratioRadius;
-    int numberOfPoint = 3;
 
     public CustomView(Context context) {
         super(context);
@@ -26,7 +26,6 @@ public class CustomView extends View{
         initCustomView();
     }
     public void initCustomView(){
-
         customShape = new CustomShape();
     }
 
@@ -50,16 +49,12 @@ public class CustomView extends View{
             radius = width * ratioRadius;
         }
 
-        customShape.setPolygon(x, y, radius, numberOfPoint);
+        customShape.setCircle(x, y, radius, Direction.CCW);
         canvas.drawPath(customShape.getPath(), customShape.getPaint());
     }
 
     public void setShapeRadiusRatio(float ratio){
-
         ratioRadius = ratio;
     }
 
-    public void setNumberOfPoint(int point){
-        numberOfPoint = point;
-    }
 }
