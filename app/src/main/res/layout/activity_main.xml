@@ -14,7 +14,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Radius"/>
+            android:text="Radius"
+            android:textColor="#4CAF50"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
 
         <SeekBar
             android:id="@+id/radiusbar"
@@ -27,7 +30,10 @@
             android:id="@+id/pointtext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Number of point in polygon:3"/>
+            android:text="Number of point in polygon:3"
+            android:textColor="#4CAF50"
+            android:textSize="18sp"
+            android:textStyle="bold|italic"/>
 
         <SeekBar
             android:id="@+id/pointbar"
@@ -36,11 +42,65 @@
             android:max="10"
             android:progress="0"/>
 
-        <com.android.polygon.CustomView
-            android:id="@+id/customview"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
 
+        <RadioGroup
+            android:id="@+id/RadioButton"
+            android:layout_width="278dp"
+            android:layout_height="wrap_content">
+
+
+            <RadioButton
+                android:id="@+id/fillinRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Fill In Polygon"
+                android:textColor="#E91E63"
+                android:textSize="18sp"
+                android:textStyle="bold|italic"
+                android:typeface="normal" />
+
+            <RadioButton
+                android:id="@+id/filloutRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fill Out Polygon"
+                android:textColor="#FF5722"
+                android:textSize="18sp"
+                android:textStyle="bold|italic" />
+
+            <RadioButton
+                android:id="@+id/changeColorRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Change Color"
+                android:textColor="#3F51B5"
+                android:textSize="18sp"
+                android:textStyle="bold|italic" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/changeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#269DAD"
+            android:text="Change"
+            android:textColor="#1A0202"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+                <com.android.polygon.CustomView
+                    android:id="@+id/customview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+        </LinearLayout>
 
 
     </LinearLayout>
